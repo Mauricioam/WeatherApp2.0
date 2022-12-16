@@ -4,7 +4,7 @@ import "./assets/scss/main.scss";
 
 function App() {
   return (
-    <div>
+    <div className="bg-img">
       <Home/>
     </div>
   );

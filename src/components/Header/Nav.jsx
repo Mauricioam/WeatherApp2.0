@@ -15,7 +15,13 @@ function Header({setCity}){
             return
         }
         axios.get(`http://api.openweathermap.org/geo/1.0/direct?q=${input && input}&appid=${API_KEY}`)
-        .then(res => setCity(res))
+        .then(res => {
+          if(res.data.length > 0){
+            setCity(res.data)
+          } else {
+            alert("Enter a valid city")
+          }
+        })
         .catch(error => console.log(error));
         
 
@@ -28,10 +34,7 @@ function Header({setCity}){
 
     return (
         <>
-        <form className="d-flex container p-3" onSubmit={handleSubmit}  >
-        <button className="btn btn-outline-warning" type="submit">
-          Search
-        </button>
+        <form className="d-flex gap-3 w-50 container p-4" onSubmit={handleSubmit}  >
         <input
         onChange={handleInput}
          autoComplete="off"
@@ -41,6 +44,9 @@ function Header({setCity}){
           aria-label="Search"
           name="city"
         />
+        <button className="btn btn-outline-warning" type="submit">
+          Search
+        </button>
       </form>
         </>
     )

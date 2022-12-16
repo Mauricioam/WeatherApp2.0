@@ -6,7 +6,7 @@ import { Binocular , Humidity , Pressure , Wind , SunSet , Clouds  } from "../..
 
 
 /* Falta ver como colocar las tarjetas  */
-function Today({ sunset, sunrise, pressure, humidity, visibility, wind }) {
+function Today({ sunset, sunrise, pressure, humidity, visibility, wind , clouds }) {
   return (
     <div className="container border p-3">
         <div className="row align-items-center justify-content-center">
@@ -16,23 +16,23 @@ function Today({ sunset, sunrise, pressure, humidity, visibility, wind }) {
         <div className="col-sm-10">
         <div className="container">
             <div className="row gap-3 justify-content-center">   
-          <div className=" col-sm-4  d-flex flex-column justify-content-center align-items-center border " style={{
-            maxWidth:"12rem",maxHeight:"12rem"
+          <div className=" col-sm-4  d-flex flex-column justify-content-evenly align-items-center border " style={{
+            width:"12rem",height:"12rem"
           }}>
             <p>Sunset-Sunrise</p>
             <SunSet/>
-            <p className="subtitles">{timeConverter(sunrise)}</p>
+            <p >{timeConverter(sunrise)}</p>
             <p>{timeConverter(sunset)}</p>
           </div>
-          <div className="col-sm-4  d-flex flex-column justify-content-center align-items-center border" style={{
-            maxWidth:"12rem",maxHeight:"12rem"
+          <div className="col-sm-4  d-flex flex-column justify-content-evenly align-items-center border" style={{
+            width:"12rem",height:"12rem"
           }}>
             <p>Visibility</p>
             <Binocular/>
             <p>{visibility} Km</p>
           
           </div>
-          <div className="col-sm-4  d-flex flex-column justify-content-center align-items-center border" style={{
+          <div className="col-sm-4  d-flex flex-column justify-content-evenly align-items-center border" style={{
             maxWidth:"12rem",maxHeight:"12rem"
           }}>
             <p>Humidity</p>
@@ -41,7 +41,7 @@ function Today({ sunset, sunrise, pressure, humidity, visibility, wind }) {
          
             
           </div>
-          <div className="col-sm-4  d-flex flex-column justify-content-center align-items-center border" style={{
+          <div className="col-sm-4  d-flex flex-column justify-content-evenly align-items-center border" style={{
             maxWidth:"12rem",maxHeight:"12rem"
           }}>
             <p>Pressure</p>
@@ -50,7 +50,7 @@ function Today({ sunset, sunrise, pressure, humidity, visibility, wind }) {
            
             
           </div>
-          <div className="col-sm-4  d-flex flex-column justify-content-center align-items-center border" style={{
+          <div className="col-sm-4  d-flex flex-column justify-content-evenly align-items-center border" style={{
             maxWidth:"12rem",maxHeight:"12rem"
           }}>
             <p>Wind</p>
@@ -59,13 +59,12 @@ function Today({ sunset, sunrise, pressure, humidity, visibility, wind }) {
            
             
           </div>
-          <div className="col-sm-4  d-flex flex-column justify-content-center align-items-center border" style={{
+          <div className="col-sm-4  d-flex flex-column justify-content-evenly align-items-center border" style={{
             maxWidth:"12rem",maxHeight:"12rem"
           }}>
             <p>Clouds</p>
             <Clouds/>
-            <p>{timeConverter(sunrise)}</p>
-            <p>{timeConverter(sunset)}</p>
+            <p>{clouds}%</p>
             
           </div>
           </div>

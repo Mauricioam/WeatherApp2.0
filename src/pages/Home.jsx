@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react";
-
-import { API_KEY } from "../components/Header/Nav";
 import { getWeatherApi } from "../utils/apiCalls/weatherApi";
 import Card from "../components/Body/Card/Card";
 import Forecast from "../components/Body/Forecast/Forecast";
@@ -11,18 +9,20 @@ import Header from "../components/Header/Nav";
 
 function Home() {
     /* states */
-  const [city, setCity] = useState();
+  const [city, setCity] = useState([]);
   const [weather, setWeather] = useState();
   const [forecast, setForecast] = useState();
 /* -------------------------------------- */
 
 /* Api call */
   useEffect(() => {
-    getWeatherApi(setForecast, setWeather, city);
+    if(city.length > 0){
+      getWeatherApi(setForecast, setWeather, city);
+    }
   }, [city]);
 /* -------------------------------------- */
 
-console.log(weather)
+
   return (
     <>
       <div className="container">
@@ -30,6 +30,7 @@ console.log(weather)
       </div>
     <div className="container-fluid">
         <div className="row justify-content-center ">
+     
       <div className="col-sm-4 ">
         {weather && (
           <Card
@@ -41,7 +42,6 @@ console.log(weather)
             description={weather?.weather[0].description}
             min_temp={weather?.main.temp_min}
             max_temp={weather?.main.temp_max}
-            clouds={weather?.clouds.all}
           />
         )}
         </div>
@@ -54,6 +54,7 @@ console.log(weather)
             humidity={weather.main.humidity}
             visibility={weather.visibility}
             wind={weather.wind.speed}
+            clouds={weather.clouds.all}
           />
         )}
        <div className="container-fluid">
