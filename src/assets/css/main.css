@@ -1,7 +1,17 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+/* global variables  */
+@import "./Global/main.css";
+/* ---------------------------------- */
+/* Card */
+@import "./Card/card.css";
+/* ---------------------------------- */
+/* Home page */
 @import "./Home/home.css";
+/* ---------------------------------- */
 
-
-@import "./Today/card.css";
+/* Today Card */
+@import "./Today/today.css";
+/* ---------------------------------- */
 
 
 

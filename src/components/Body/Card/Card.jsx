@@ -13,7 +13,7 @@ function Card({
 }) {
   return (
     <>
-      <div className="container-fluid p-3  d-flex-column text-center border rounded ">
+      <div className="container-fluid p-3  d-flex-column text-center border rounded bg-color ">
         <div className="card-container">
           <div className="card-body">
             <h1 className="display-6">

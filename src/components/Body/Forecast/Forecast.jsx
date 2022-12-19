@@ -3,10 +3,10 @@ import { timeConverter } from "../../../utils/timeConverter";
 function Forecast({ hour, icon, temp }) {
   return (
     <>
-      <div className="container border rounded">
-        <p>{timeConverter(hour)}0</p>
+      <div className="container d-flex-column text-center border rounded bg-color">
+        <p className="fw-bold">{timeConverter(hour)}0</p>
         <img src={icon} alt="icon" className="w-50" />
-        <p>{temp}°C</p>
+        <p className="fw-bold">{temp}°C</p>
       </div>
     </>
   );

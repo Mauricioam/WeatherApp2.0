@@ -29,9 +29,9 @@ function Home() {
         <Header setCity={setCity} />
       </div>
     <div className="container-fluid">
-        <div className="row justify-content-center ">
+        <div className="row justify-content-center align-items-center ">
      
-      <div className="col-sm-4 ">
+      <div className="col-md-4 ">
         {weather && (
           <Card
             city={weather?.name}
@@ -45,7 +45,7 @@ function Home() {
           />
         )}
         </div>
-            <div className="col-sm-8">
+            <div className="col-md-8">
         {weather && (
           <Today
             sunset={weather.sys.sunset}
@@ -57,22 +57,26 @@ function Home() {
             clouds={weather.clouds.all}
           />
         )}
-       <div className="container-fluid">
-        <div className="row text-center">
+
+     </div>
+      </div>
+      </div>
+      <div className="container-fluid d-md-flex justify-content-center gap-5 mt-3">
+    
         {forecast  && forecast.list.map((item) => (
-            <div className="col p-2">
+          
+       
             <Forecast
             hour={item.dt}
             icon={`http://openweathermap.org/img/w/${item.weather[0].icon}.png`}
             temp={item.main.temp}
             />
-            </div>
-        ))}    
-        </div>
+         
+            ))}    
+      
      </div>
-     </div>
-      </div>
-      </div>
+
+
     </>
   );
 }

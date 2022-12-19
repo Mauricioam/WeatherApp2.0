@@ -34,6 +34,7 @@ function Header({setCity}){
 
     return (
         <>
+        <header>
         <form className="d-flex gap-3 w-50 container p-4" onSubmit={handleSubmit}  >
         <input
         onChange={handleInput}
@@ -48,6 +49,7 @@ function Header({setCity}){
           Search
         </button>
       </form>
+      </header>
         </>
     )
 }
