@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { getWeatherApi } from "../utils/apiCalls/weatherApi";
+import Welcome from "../components/Body/Welcome/Welcome";
+import Loading from "../components/Loading/Loading";
 import Card from "../components/Body/Card/Card";
 import Forecast from "../components/Body/Forecast/Forecast";
 import Today from "../components/Body/Today/Today";
@@ -12,6 +14,7 @@ function Home() {
   const [city, setCity] = useState([]);
   const [weather, setWeather] = useState();
   const [forecast, setForecast] = useState();
+  const [isLoading, setLoading] = useState(false);
 /* -------------------------------------- */
 
 /* Api call */
@@ -26,10 +29,12 @@ function Home() {
   return (
     <>
       <div className="container">
-        <Header setCity={setCity} />
+        <Header setCity={setCity} setLoading={setLoading} isLoading={isLoading}/>
       </div>
     <div className="container-fluid">
-        <div className="row justify-content-center align-items-center ">
+   {isLoading ? <Loading/> : ""}
+    {!(weather && forecast) && <Welcome/>}
+      <div className="row justify-content-center align-items-center ">
      
       <div className="col-md-4 ">
         {weather && (

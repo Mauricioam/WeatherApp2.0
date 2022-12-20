@@ -2,6 +2,9 @@
 /* global variables  */
 @import "./Global/main.css";
 /* ---------------------------------- */
+/* Welcome */
+@import "./Welcome/welcome-animation.css";
+/* ---------------------------------- */
 /* Card */
 @import "./Card/card.css";
 /* ---------------------------------- */
