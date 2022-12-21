@@ -18,7 +18,7 @@ function Header({ setCity, setLoading, isLoading }) {
     console.log(input);
     axios
       .get(
-        `http://api.openweathermap.org/geo/1.0/direct?q=${
+        `https://api.openweathermap.org/geo/1.0/direct?q=${
           input && input
         }&appid=${API_KEY}`
       )
@@ -32,7 +32,7 @@ function Header({ setCity, setLoading, isLoading }) {
           setLoading(false);
         }
       })
-      .catch((error) => console.log(error.response.data));
+      .catch((error) => console.log(error));
   };
 
   const handleInput = (e) => {
