@@ -6,6 +6,7 @@ import Card from "../components/Body/Card/Card";
 import Forecast from "../components/Body/Forecast/Forecast";
 import Today from "../components/Body/Today/Today";
 import Header from "../components/Header/Nav";
+import Footer from "../components/Footer/Footer";
 
 /* Container for the homepage */
 
@@ -25,6 +26,7 @@ function Home() {
   }, [city]);
 /* -------------------------------------- */
 
+console.log(isLoading);
 
   return (
     <>
@@ -32,8 +34,11 @@ function Home() {
         <Header setCity={setCity} setLoading={setLoading} isLoading={isLoading}/>
       </div>
     <div className="container-fluid">
-   {isLoading ? <Loading/> : ""}
-    {!(weather && forecast) && <Welcome/>}
+    {isLoading ?     <div className="container text-center">
+    <Loading/> 
+    </div> : ""}
+
+    {!(weather && forecast) ? <Welcome/> : ""}
       <div className="row justify-content-center align-items-center ">
      
       <div className="col-md-4 ">
@@ -81,7 +86,7 @@ function Home() {
       
      </div>
 
-
+          <Footer/>
     </>
   );
 }

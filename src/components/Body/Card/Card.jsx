@@ -6,10 +6,7 @@ function Card({
   icon,
   temp,
   feels_like,
-  description,
-  min_temp,
-  max_temp,
-  clouds,
+  description
 }) {
   return (
     <>

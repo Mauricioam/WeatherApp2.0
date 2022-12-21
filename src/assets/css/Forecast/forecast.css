@@ -1,0 +1,10 @@
+/* Mobile size */
+
+
+@media only screen and (max-width: 767px){
+    .forecast-mobile{
+        margin-bottom: 1rem;
+        width: 15rem;
+    }
+    
+ }

@@ -1,7 +1,7 @@
 function Loading() {
   return (
     <>
-      <div class="spinner-border" role="status" style={{
+      <div className="spinner-border" role="status" style={{
         height:"3rem",
         width:"3rem"
       }}>

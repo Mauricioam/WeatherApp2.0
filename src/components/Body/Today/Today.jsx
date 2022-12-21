@@ -10,13 +10,13 @@ function Today({ sunset, sunrise, pressure, humidity, visibility, wind , clouds 
   return (
     <div className="container border p-3 bg-color mt-3">
         <div className="row align-items-center justify-content-center">
-      <div className=" col-12 col-md-2 ">
-        <h1 className="display-5 m-md-0 text-center mb-5 ">Today</h1>
+      <div className=" col-12 col-md-12  col-lg-2 ">
+        <h1 className="display-5 m-md-4 text-center mb-5 ">Today</h1>
         </div>
-        <div className=" col-12 col-sm-10">
+        <div className=" col-12 col-md-12 col-lg-10">
         <div className="container">
-            <div className="row gap-3 justify-content-center">   
-          <div className=" col-md-4  d-flex flex-column justify-content-evenly align-items-center border " style={{
+            <div className="row gap-2 justify-content-center">   
+          <div className=" col-sm-2 col-md-4  d-flex flex-column justify-content-evenly align-items-center border " style={{
             width:"12rem",height:"12rem"
           }}>
             <p className="fw-bold">Sunset-Sunrise</p>
@@ -24,7 +24,7 @@ function Today({ sunset, sunrise, pressure, humidity, visibility, wind , clouds 
             <p >{timeConverter(sunrise)}</p>
             <p>{timeConverter(sunset)}</p>
           </div>
-          <div className="col-md-4  d-flex flex-column justify-content-evenly align-items-center border" style={{
+          <div className="  col-sm-2 col-md-4  d-flex flex-column justify-content-evenly align-items-center border" style={{
             width:"12rem",height:"12rem"
           }}>
             <p className="fw-bold">Visibility</p>
@@ -32,8 +32,8 @@ function Today({ sunset, sunrise, pressure, humidity, visibility, wind , clouds 
             <p>{visibility} M</p>
           
           </div>
-          <div className="col-md-4  d-flex flex-column justify-content-evenly align-items-center border" style={{
-            maxWidth:"12rem",maxHeight:"12rem"
+          <div className=" col-sm-2 col-md-4  d-flex flex-column justify-content-evenly align-items-center border" style={{
+            width:"12rem",height:"12rem"
           }}>
             <p className="fw-bold">Humidity</p>
             <Humidity/>
@@ -41,8 +41,8 @@ function Today({ sunset, sunrise, pressure, humidity, visibility, wind , clouds 
          
             
           </div>
-          <div className="col-md-4  d-flex flex-column justify-content-evenly align-items-center border" style={{
-            maxWidth:"12rem",maxHeight:"12rem"
+          <div className="  col-sm-2 col-md-4  d-flex flex-column justify-content-evenly align-items-center border" style={{
+            width:"12rem",height:"12rem"
           }}>
             <p className="fw-bold">Pressure</p>
             <Pressure/>
@@ -50,8 +50,8 @@ function Today({ sunset, sunrise, pressure, humidity, visibility, wind , clouds 
            
             
           </div>
-          <div className="col-md-4  d-flex flex-column justify-content-evenly align-items-center border" style={{
-            maxWidth:"12rem",maxHeight:"12rem"
+          <div className="  col-sm-2 col-md-4  d-flex flex-column justify-content-evenly align-items-center border" style={{
+            width:"12rem",height:"12rem"
           }}>
             <p className="fw-bold">Wind</p>
             <Wind/>
@@ -59,8 +59,8 @@ function Today({ sunset, sunrise, pressure, humidity, visibility, wind , clouds 
            
             
           </div>
-          <div className="col-md-4  d-flex flex-column justify-content-evenly align-items-center border" style={{
-            maxWidth:"12rem",maxHeight:"12rem"
+          <div className=" col-sm-2 col-md-4  d-flex flex-column justify-content-evenly align-items-center border" style={{
+            width:"12rem",height:"12rem"
           }}>
             <p className="fw-bold">Clouds</p>
             <Clouds/>

@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import { MagnifyIcon } from "../Icons";
 
 export const API_KEY = "bb4a906819197c0bec517509eea8775a";
 
@@ -15,9 +16,9 @@ function Header({setCity,setLoading,isLoading}){
             return
         }
         
+        setLoading(true);
         axios.get(`http://api.openweathermap.org/geo/1.0/direct?q=${input && input}&appid=${API_KEY}`)
         .then(res => {
-          setLoading(true);
           if(res.data.length > 0){
             setCity(res.data)
             setLoading(false);
@@ -31,16 +32,14 @@ function Header({setCity,setLoading,isLoading}){
 
     }
     
-    console.log(isLoading);
     const handleInput = (e) =>  {
         const inputValue = e.currentTarget.value;
         setInput(inputValue);
     }
-
     return (
         <>
-        <header>
-        <form className="d-flex gap-3 w-50 container p-4" onSubmit={handleSubmit}  >
+        <header className="row justify-content-center">
+        <form className=" col-lg-4 col-md-4 col-sm-8 col-10 justify-content-center d-flex gap-3  p-4" onSubmit={handleSubmit}  >
         <input
         onChange={handleInput}
          autoComplete="off"
@@ -51,8 +50,8 @@ function Header({setCity,setLoading,isLoading}){
           name="city"
         />
 
-        <button className="btn btn-outline-warning" type="submit" disabled={isLoading}>
-          Search
+        <button className="btn btn-outline-warning d-flex align-items-center justify-content-center" type="submit" disabled={isLoading}>
+          <MagnifyIcon/>
         </button>
       </form>
       </header>

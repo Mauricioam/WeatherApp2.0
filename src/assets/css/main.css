@@ -11,11 +11,6 @@
 /* Home page */
 @import "./Home/home.css";
 /* ---------------------------------- */
-
-/* Today Card */
-@import "./Today/today.css";
+/* Forecast */
+@import "./Forecast/forecast.css";
 /* ---------------------------------- */
-
-
-
-
