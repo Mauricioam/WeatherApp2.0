@@ -17,9 +17,11 @@ function Header({setCity,setLoading,isLoading}){
         }
         
         setLoading(true);
+        console.log(input)
         axios.get(`http://api.openweathermap.org/geo/1.0/direct?q=${input && input}&appid=${API_KEY}`)
         .then(res => {
           if(res.data.length > 0){
+            console.log(res.data)
             setCity(res.data)
             setLoading(false);
           } else {
