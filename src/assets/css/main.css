@@ -14,3 +14,12 @@
 /* Forecast */
 @import "./Forecast/forecast.css";
 /* ---------------------------------- */
+/* Footer */
+@import "./Footer/footer.css";
+/* ---------------------------------- */
+/* Footer */
+@import "./Swal-alerts/swal.css";
+/* ---------------------------------- */
+/* Footer */
+@import "./Loading/loading.css";
+/* ---------------------------------- */

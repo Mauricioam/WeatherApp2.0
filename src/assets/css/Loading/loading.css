@@ -1,0 +1,14 @@
+.loadin-position{
+    position: absolute;
+    bottom: 10rem;
+}
+
+/* Mobile */
+
+@media screen and (max-width:428px) {
+    .loadin-position {
+       position: absolute;
+       bottom: 12rem;
+    }
+    
+}
