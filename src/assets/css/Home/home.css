@@ -1,6 +1,6 @@
 .bg-img{
-    background-image: url("../../images/city-bg.jfif");
-    background-repeat: no-repeat;
+    background-image:url("../../images/clouds-bg.jpg");
     background-size: cover;
+    min-height: 100vh;
 
 }

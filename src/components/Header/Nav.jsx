@@ -43,7 +43,7 @@ function Header({ setCity, setLoading, isLoading }) {
     <>
       <header className="row justify-content-center">
         <form
-          className=" col-lg-4 col-md-4 col-sm-8 col-10 justify-content-center d-flex gap-3  p-4"
+          className=" col-lg-12 col-md-10 col-sm-10 col-10  d-flex  gap-3  p-4"
           onSubmit={handleSubmit}
         >
           <input

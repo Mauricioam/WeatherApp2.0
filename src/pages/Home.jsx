@@ -26,19 +26,21 @@ function Home() {
   }, [city]);
 /* -------------------------------------- */
 
-console.log(isLoading);
+
 
   return (
     <>
-      <div className="container">
+   
+    <div className="container-fluid">
+
+    <div className="container-fluid d-flex flex-column align-items-center justify-content-center " >
+    {!(weather && forecast) ? <div><Welcome/></div> : ""}
         <Header setCity={setCity} setLoading={setLoading} isLoading={isLoading}/>
       </div>
-    <div className="container-fluid">
-    {isLoading ?     <div className="container text-center">
+      {isLoading ?     <div className="container text-center">
     <Loading/> 
     </div> : ""}
 
-    {!(weather && forecast) ? <Welcome/> : ""}
       <div className="row justify-content-center align-items-center ">
      
       <div className="col-md-4 ">
