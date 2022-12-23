@@ -26,18 +26,18 @@ function Home() {
   }, [city]);
 /* -------------------------------------- */
 
-
+const style = weather ? {minHeight:"0"} : {minHeight:"100vh"};
 
   return (
     <>
    
     <div className="container-fluid">
 
-    <div className="container-fluid d-flex flex-column align-items-center justify-content-center " >
+    <div className="container-fluid d-flex flex-column align-items-center justify-content-center " style={style} >
     {!(weather && forecast) ? <div><Welcome/></div> : ""}
         <Header setCity={setCity} setLoading={setLoading} isLoading={isLoading}/>
       </div>
-      {isLoading ?     <div className="container text-center">
+    {isLoading ?     <div className="container text-center m-5">
     <Loading/> 
     </div> : ""}
 

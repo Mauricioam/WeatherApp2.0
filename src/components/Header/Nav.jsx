@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useState } from "react";
 import { MagnifyIcon } from "../Icons";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const API_KEY = "bb4a906819197c0bec517509eea8775a";
 
